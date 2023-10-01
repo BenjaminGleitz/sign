@@ -48,8 +48,14 @@ class AppCustomAuthenticator extends AbstractLoginFormAuthenticator
             return new RedirectResponse($targetPath);
         }
 
-        // For example:
-        return new RedirectResponse($this->urlGenerator->generate('home_teacher_index'));
+        $user = $token->getUser();
+
+        if ($user->getStatus() === 'student') {
+        
+        return new RedirectResponse($this->urlGenerator->generate('student_index'));
+        }
+
+        return new RedirectResponse($this->urlGenerator->generate('teacher_index'));
         // throw new \Exception('TODO: provide a valid redirect inside '.__FILE__);
     }
 

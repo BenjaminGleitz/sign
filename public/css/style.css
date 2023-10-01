@@ -2,33 +2,62 @@
 
 body {
     margin: 0;
+    font-family: 'Kanit', sans-serif;
 }
 
 nav {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 15vh;
     background-color: rgb(0, 170, 217);
+    color: white;
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
 }
 
 .nav_title {
     font-size: 50px;
     font-weight: bolder;
+    margin-left: 50px;
 }
 
-.brand {
-    color: black;
-    font-family: 'Kanit', sans-serif;
+.connected_user {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-right: 50px;
 }
 
 footer {
     height: 15vh;
 }
 
-a {
+button a {
     text-decoration: none;
-    color: black;
+    font-weight: bold;
+    color: white;
+}
+
+/* ! HOME */
+
+.form_button {
+    width: 300px;
+    border-radius: 10px;
+    background-color: rgb(0, 170, 217);
+    border-style: none;
+    margin: 10px;
+    height: 40px;
+}
+
+.logout_button {
+    width: 150px;
+    margin-left: 30px;
+    background-color: red;
 }
 
 /* ! REGISTER */
@@ -49,7 +78,6 @@ form {
     display: flex;
     flex-direction: column;
     text-align: center;
-    vertical-align: center;
     width: 400px;
 }
 
@@ -57,17 +85,40 @@ form div {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
 }
 
 form input{
     width: 200px;
     padding: 1px;
     margin: 5px;
+    height: 20px;
 }
 
 form select {
     width: 205px;
     padding: 1px;
     margin: 5px;
+    height: 25px;
+}
+
+.form_button--register {
+    width: 100%;
+    margin: 20px 0 20px 0;
+}
+
+/* ! LOGIN */
+.login_form {
+    justify-content: center;
+    align-items: center;
+}
+
+.login_form input{
+    width: 100%;
+    margin: 0 0 10px 0;
+}
+
+.login_form button{
+    width: 100%;
 }
 
